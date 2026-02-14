@@ -7,14 +7,37 @@
 
 import UIKit
 import Alamofire
+import SnapKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var redView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    //MARK: - SnapKit
     
+    func setConstraintViaSnapKit() {
+        redView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.height.equalTo(128.0)
+            make.width.equalTo(256.0)
+        }
+    }
+    func setConstraintViaAutoLayout() {
+        redView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+redView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+redView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+redView.heightAnchor.constraint(equalToConstant: 128.0),
+redView.widthAnchor.constraint(equalToConstant: 256.0)
+        ])
+    }
+    
+    //MARK: - Alamofire
     func fetcWithAlamofire() {
         AF.request("https://httpbin.org/get").response { response in
             debugPrint(response)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 101CC5442F409A2A008C6C6D /* Alamofire */; };
+		105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105DCF122F40B32500C98FA5 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */,
+				105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = SpmExample;
 			packageProductDependencies = (
 				101CC5442F409A2A008C6C6D /* Alamofire */,
+				105DCF122F40B32500C98FA5 /* SnapKit */,
 			);
 			productName = SpmExample;
 			productReference = 101CC5262F409897008C6C6D /* SpmExample.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				101CC5432F409A2A008C6C6D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 101CC5272F409897008C6C6D /* Products */;
@@ -362,6 +366,14 @@
 				minimumVersion = 5.11.1;
 			};
 		};
+		105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 101CC5432F409A2A008C6C6D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		105DCF122F40B32500C98FA5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
