@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CocoapodsExample
+//  SpmExample
 //
-//  Created by Caner Çakal on 12.02.2026.
+//  Created by Caner Çakal on 14.02.2026.
 //
 
 import UIKit
