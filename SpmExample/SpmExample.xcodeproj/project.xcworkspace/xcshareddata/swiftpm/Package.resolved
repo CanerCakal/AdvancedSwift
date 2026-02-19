@@ -1,5 +1,5 @@
 {
-  "originHash" : "53f63881fb23c58dbd972b896adfe0e7c6369223429d9d18d8846de86d28dec1",
+  "originHash" : "cf4652bfd02d9688de786e0b1991ba35d4942eb7b6a726064227105ed87afec2",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -107,6 +107,15 @@
       "state" : {
         "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
         "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "swiftgenplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftGen/SwiftGenPlugin",
+      "state" : {
+        "revision" : "879b85a470cacd70c19e22eb7e11a3aed66f4068",
+        "version" : "6.6.2"
       }
     }
   ],

@@ -11,11 +11,13 @@
 		105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105DCF122F40B32500C98FA5 /* SnapKit */; };
 		10D98F1B2F4717B9006E0D9F /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = 10D98F1A2F4717B9006E0D9F /* FLEX */; };
 		10D98F1E2F4738C1006E0D9F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10D98F1D2F4738C1006E0D9F /* IQKeyboardManagerSwift */; };
+		10D98F222F47488C006E0D9F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 10D98F212F47488C006E0D9F /* swiftgen.yml */; };
 		10DDCDC82F434324009D447A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 10DDCDC72F434324009D447A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		101CC5262F409897008C6C6D /* SpmExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpmExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10D98F212F47488C006E0D9F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -58,6 +60,7 @@
 		101CC51D2F409897008C6C6D = {
 			isa = PBXGroup;
 			children = (
+				10D98F212F47488C006E0D9F /* swiftgen.yml */,
 				101CC5282F409897008C6C6D /* SpmExample */,
 				101CC5272F409897008C6C6D /* Products */,
 			);
@@ -81,6 +84,7 @@
 				101CC5222F409897008C6C6D /* Sources */,
 				101CC5232F409897008C6C6D /* Frameworks */,
 				101CC5242F409897008C6C6D /* Resources */,
+				10D98F202F4745B2006E0D9F /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -131,6 +135,7 @@
 				10DDCDC62F434324009D447A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				10D98F192F4717B9006E0D9F /* XCRemoteSwiftPackageReference "FLEX" */,
 				10D98F1C2F4738C1006E0D9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				10D98F1F2F4742AB006E0D9F /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 101CC5272F409897008C6C6D /* Products */;
@@ -147,10 +152,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D98F222F47488C006E0D9F /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10D98F202F4745B2006E0D9F /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen\n    else \n    echo \"Warning: swiftgen not installed.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		101CC5222F409897008C6C6D /* Sources */ = {
@@ -400,6 +427,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.2;
+			};
+		};
+		10D98F1F2F4742AB006E0D9F /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftGen/SwiftGenPlugin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.2;
 			};
 		};
 		10DDCDC62F434324009D447A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
