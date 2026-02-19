@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        setupFLEXGesture()
         super.viewDidLoad()
         
     }
