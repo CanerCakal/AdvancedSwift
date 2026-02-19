@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 101CC5442F409A2A008C6C6D /* Alamofire */; };
 		105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105DCF122F40B32500C98FA5 /* SnapKit */; };
+		10D98F1B2F4717B9006E0D9F /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = 10D98F1A2F4717B9006E0D9F /* FLEX */; };
 		10DDCDC82F434324009D447A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 10DDCDC72F434324009D447A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 				10DDCDC82F434324009D447A /* Kingfisher in Frameworks */,
 				101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */,
 				105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */,
+				10D98F1B2F4717B9006E0D9F /* FLEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +92,7 @@
 				101CC5442F409A2A008C6C6D /* Alamofire */,
 				105DCF122F40B32500C98FA5 /* SnapKit */,
 				10DDCDC72F434324009D447A /* Kingfisher */,
+				10D98F1A2F4717B9006E0D9F /* FLEX */,
 			);
 			productName = SpmExample;
 			productReference = 101CC5262F409897008C6C6D /* SpmExample.app */;
@@ -123,6 +126,7 @@
 				101CC5432F409A2A008C6C6D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				10DDCDC62F434324009D447A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				10D98F192F4717B9006E0D9F /* XCRemoteSwiftPackageReference "FLEX" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 101CC5272F409897008C6C6D /* Products */;
@@ -378,6 +382,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		10D98F192F4717B9006E0D9F /* XCRemoteSwiftPackageReference "FLEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FLEXTool/FLEX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.22.10;
+			};
+		};
 		10DDCDC62F434324009D447A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -398,6 +410,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		10D98F1A2F4717B9006E0D9F /* FLEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10D98F192F4717B9006E0D9F /* XCRemoteSwiftPackageReference "FLEX" */;
+			productName = FLEX;
 		};
 		10DDCDC72F434324009D447A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
