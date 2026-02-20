@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 101CC5442F409A2A008C6C6D /* Alamofire */; };
+		10303D332F48A4E3001473DB /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 10303D322F48A4E3001473DB /* SwiftLintFramework */; };
+		10303D352F48A4E3001473DB /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 10303D342F48A4E3001473DB /* swiftlint */; };
 		105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105DCF122F40B32500C98FA5 /* SnapKit */; };
 		10D98F1B2F4717B9006E0D9F /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = 10D98F1A2F4717B9006E0D9F /* FLEX */; };
 		10D98F1E2F4738C1006E0D9F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10D98F1D2F4738C1006E0D9F /* IQKeyboardManagerSwift */; };
@@ -48,7 +50,9 @@
 			files = (
 				10D98F1E2F4738C1006E0D9F /* IQKeyboardManagerSwift in Frameworks */,
 				10DDCDC82F434324009D447A /* Kingfisher in Frameworks */,
+				10303D332F48A4E3001473DB /* SwiftLintFramework in Frameworks */,
 				101CC5452F409A2A008C6C6D /* Alamofire in Frameworks */,
+				10303D352F48A4E3001473DB /* swiftlint in Frameworks */,
 				105DCF132F40B32500C98FA5 /* SnapKit in Frameworks */,
 				10D98F1B2F4717B9006E0D9F /* FLEX in Frameworks */,
 			);
@@ -85,6 +89,7 @@
 				101CC5232F409897008C6C6D /* Frameworks */,
 				101CC5242F409897008C6C6D /* Resources */,
 				10D98F202F4745B2006E0D9F /* SwiftGen */,
+				10303D362F48A4F7001473DB /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -100,6 +105,8 @@
 				10DDCDC72F434324009D447A /* Kingfisher */,
 				10D98F1A2F4717B9006E0D9F /* FLEX */,
 				10D98F1D2F4738C1006E0D9F /* IQKeyboardManagerSwift */,
+				10303D322F48A4E3001473DB /* SwiftLintFramework */,
+				10303D342F48A4E3001473DB /* swiftlint */,
 			);
 			productName = SpmExample;
 			productReference = 101CC5262F409897008C6C6D /* SpmExample.app */;
@@ -136,6 +143,7 @@
 				10D98F192F4717B9006E0D9F /* XCRemoteSwiftPackageReference "FLEX" */,
 				10D98F1C2F4738C1006E0D9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				10D98F1F2F4742AB006E0D9F /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */,
+				10303D312F48A4E3001473DB /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 101CC5272F409897008C6C6D /* Products */;
@@ -159,6 +167,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10303D362F48A4F7001473DB /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then     swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		10D98F202F4745B2006E0D9F /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +431,14 @@
 				minimumVersion = 5.11.1;
 			};
 		};
+		10303D312F48A4E3001473DB /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
 		105DCF112F40B32500C98FA5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -452,6 +486,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 101CC5432F409A2A008C6C6D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		10303D322F48A4E3001473DB /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10303D312F48A4E3001473DB /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		10303D342F48A4E3001473DB /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10303D312F48A4E3001473DB /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
 		};
 		105DCF122F40B32500C98FA5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
